@@ -1,0 +1,24 @@
+/* profile-custom.js */
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Efect de hover pentru secțiunile profilului
+  const profileSections = document.querySelectorAll('.profile-info');
+
+  profileSections.forEach(function (section) {
+    section.addEventListener('mouseenter', function () {
+      section.style.boxShadow = '0 6px 15px rgba(0, 0, 0, 0.1)';
+    });
+    section.addEventListener('mouseleave', function () {
+      section.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.05)';
+    });
+  });
+
+  // Efect de click pe butoane
+  const actionButtons = document.querySelectorAll('.profile-actions .btn');
+
+  actionButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      alert('Acțiunea a fost efectuată!');
+    });
+  });
+});
